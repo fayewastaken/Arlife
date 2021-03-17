@@ -15,7 +15,7 @@ public class ChangeNamePanel : MonoBehaviour
     public InputField inputFirstName;
     public InputField inputLastName;
 
-    void Start()
+    void Update()
     {
         FirstNamePlaceholder.text = nameManager.firstName;
         LastNamePlaceholder.text = nameManager.lastName;
@@ -31,7 +31,7 @@ public class ChangeNamePanel : MonoBehaviour
 
     public void OnBackClicked()
     {
-        panelManager.CloseChangeNameUI();
+        panelManager.UnsaveChangeNameUI();
         inputFirstName.clear();
         inputLastName.clear();
     }

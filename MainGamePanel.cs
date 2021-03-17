@@ -7,35 +7,28 @@ public class MainGamePanel : MonoBehaviour
 {
     [Header("Display Contents")]
     public Text DisplayName;
-    public Text DisplayAge;
     public Text DisplayMoney;
+    public Text DisplayAge;
 
     public NameManager nameManager;
-
-    public float Money;
-    public float Age;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        print(DisplayName.text);
+        gameManager.StatusRandomRange();
     }
 
     // Update is called once per frame
     void Update()
     {
         DisplayName.text = nameManager.fullName;
-        DisplayMoney.text = "$" + Money.ToString();
-        DisplayAge.text = Age.ToString();
-    }
-
-    public void TestMoney()
-    {
-        Money += 1000;
+        DisplayMoney.text = "$" + gameManager.Money.ToString();
+        DisplayAge.text = "Age: " + gameManager.Age.ToString() + " years";
     }
 
     public void ButtonAgeClicked()
     {
-        Age += 1;
+        gameManager.Age += 1;
     }
 }

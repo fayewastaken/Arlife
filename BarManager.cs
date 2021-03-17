@@ -22,15 +22,6 @@ public class BarManager : MonoBehaviour
 
     public GameManager gameManager;
 
-    //private void Start()
-    //{
-    //    //Find
-    //    HappinessBar = GetComponent<Image>();
-    //    HealthBar = GetComponent<Image>();
-    //    SmartsBar = GetComponent<Image>();
-    //    LooksBar = GetComponent<Image>();
-    //}
-
     private void Update()
     {
         CurrentHappiness = gameManager.Happiness;
